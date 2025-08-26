@@ -40,7 +40,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="section-padding bg-gray-50" id="contact-form">
+    <section   className="section-padding bg-gray-50" id="contact-form">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="section-title">

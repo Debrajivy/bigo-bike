@@ -28,7 +28,7 @@ const Founders = () => {
 
   return (
     <section className="section-padding bg-gray-50" id="founders">
-      <div className="container mx-auto">
+      {/* <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="section-title">
             MEET OUR
@@ -64,7 +64,7 @@ const Founders = () => {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
