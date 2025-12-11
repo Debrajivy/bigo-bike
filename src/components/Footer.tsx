@@ -13,16 +13,14 @@ const Footer = () => {
               Your daily business runner on subscription. Revolutionizing urban mobility with sustainable EV solutions.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-bigo-green transition-colors">
+              <a href="https://www.facebook.com/share/18gGfEzfXx" className="text-gray-300 hover:text-bigo-green transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-bigo-green transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-bigo-green transition-colors">
+            
+              <a href="https://www.linkedin.com/company/bigobike/posts/?feedView=all" className="text-gray-300 hover:text-bigo-green transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-bigo-green transition-colors">
+              <a href="https://www.instagram.com/bike.bigo" className="text-gray-300 hover:text-bigo-green transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
@@ -67,7 +65,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-bigo-green" />
-                <span className="text-gray-300">Bangalore, India</span>
+                <span className="text-gray-300">West Bengal, Kolkata, India</span>
               </div>
             </div>
           </div>

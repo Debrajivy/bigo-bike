@@ -5,7 +5,7 @@ const Services = () => {
   const services = [
     {
       icon: Package,
-      title: "FOR BUSINESSES LIKE YOURS.",
+      title: "FOR BUSINESSES LIKE YOURS",
       subtitle: "Complete Delivery Solutions",
       features: [
         "Custom B2B Deliveries",
@@ -37,7 +37,7 @@ const Services = () => {
           <h2 className="section-title">
             FOR BUSINESSES
             <br />
-            <span className="text-bigo-teal">LIKE YOURS.</span>
+            <span className="text-bigo-teal">LIKE YOURS</span>
           </h2>
           <p className="section-subtitle mx-auto">
             Comprehensive solutions tailored to meet your unique business mobility needs

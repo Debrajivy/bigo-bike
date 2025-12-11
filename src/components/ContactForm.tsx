@@ -46,7 +46,7 @@ const ContactForm = () => {
           <h2 className="section-title">
             GET STARTED WITH
             <br />
-            <span className="text-bigo-teal">BIGO.BIKE</span>
+            <span className="text-bigo-teal">BIGO</span>
           </h2>
           <p className="section-subtitle mx-auto">
             Ready to transform your business mobility? Fill out the form below and we'll get back to you within 24 hours.
@@ -90,7 +90,7 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Office</h3>
-                    <p className="text-gray-600">Bangalore, Karnataka, India</p>
+                    <p className="text-gray-600">West Bengal, Kolkata, India</p>
                   </div>
                 </div>
                 
