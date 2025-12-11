@@ -32,10 +32,12 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Fleet Management</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Delivery Solutions</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Corporate Plans</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Maintenance</a></li>
+              <li><a href="#industries" className="text-gray-300 hover:text-white transition-colors">Cloud Kitchens & Restaurants</a></li>
+              <li><a href="#industries" className="text-gray-300 hover:text-white transition-colors">Hyperlocals & E-Commerce</a></li>
+              <li><a href="#industries" className="text-gray-300 hover:text-white transition-colors">Bigo Services</a></li>
+              <li><a href="#industries" className="text-gray-300 hover:text-white transition-colors">Home Businesses</a></li>
+              <li><a href="#industries" className="text-gray-300 hover:text-white transition-colors">Real Estate</a></li>
+              <li><a href="#industries" className="text-gray-300 hover:text-white transition-colors">Other Services</a></li>
             </ul>
           </div>
 
@@ -43,10 +45,11 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-2">
-              <li><a href="#mission" className="text-gray-300 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#founders" className="text-gray-300 hover:text-white transition-colors">Team</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Careers</a></li>
-              <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Press</a></li>
+              <li><a href="#about" className="text-gray-300 hover:text-white transition-colors">About Us</a></li>
+              <li><a href="#mission-vision" className="text-gray-300 hover:text-white transition-colors">Our Purpose</a></li>
+              <li><a href="#services" className="text-gray-300 hover:text-white transition-colors">Industries</a></li>
+              <li><a href="#industries" className="text-gray-300 hover:text-white transition-colors">Services</a></li>
+              <li><a href="#contact-form" className="text-gray-300 hover:text-white transition-colors">Contact Us</a></li>
             </ul>
           </div>
 
