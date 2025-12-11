@@ -40,7 +40,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section   className="section-padding bg-gray-50" id="contact-form">
+    <section className="section-padding bg-gray-50" id="contact-form">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="section-title">
@@ -70,7 +70,7 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Email</h3>
-                    <p className="text-gray-600">hello@bigo.bike</p>
+                    <p className="text-gray-600">ankit@bigo.bike</p>
                   </div>
                 </div>
                 
@@ -80,7 +80,7 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Phone</h3>
-                    <p className="text-gray-600">+91 98765 43210</p>
+                    <p className="text-gray-600">+91 9831012456</p>
                   </div>
                 </div>
                 
@@ -100,7 +100,7 @@ const ContactForm = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Business Hours</h3>
-                    <p className="text-gray-600">Mon-Fri: 9AM-6PM IST</p>
+                    <p className="text-gray-600"> Mon-Sat 10Am-7PM</p>
                   </div>
                 </div>
               </CardContent>

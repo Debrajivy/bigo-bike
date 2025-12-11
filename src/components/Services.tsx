@@ -10,23 +10,12 @@ const Services = () => {
       features: [
         "Custom B2B Deliveries",
         "Flexible Scheduling", 
-        "Bulk Delivery Management",
+
         "Real-time Fleet Tracking",
         "Dedicated Account Support"
       ]
     },
-    {
-      icon: Users,
-      title: "ENTERPRISE SOLUTIONS",
-      subtitle: "Scalable Fleet Management", 
-      features: [
-        "Multi-location Support",
-        "Advanced Analytics & Reporting",
-        "Custom Integration APIs",
-        "White-label Solutions",
-        "24/7 Enterprise Support"
-      ]
-    },
+ 
     {
       icon: Wrench,
       title: "TECHNICAL SUPPORT",
@@ -55,7 +44,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <div key={index} className="feature-card group">
               <div className="bg-bigo-teal-light/20 rounded-xl p-4 w-fit mb-6 group-hover:bg-bigo-teal-light/40 transition-colors">

@@ -1,31 +1,42 @@
-
-import { Building2, ShoppingBag, Truck, Users } from 'lucide-react';
+import { ShoppingBag, Utensils, Truck, Home, Building2, User } from 'lucide-react';
 
 const IndustryShowcase = () => {
   const industries = [
     {
-      icon: ShoppingBag,
-      title: "E-Commerce",
-      description: "Fast last-mile delivery for online retailers",
-      stats: "50+ Partners"
+      icon: Utensils,
+      title: "Cloud Kitchens & Restaurants",
+      description: "Eco-friendly food delivery solutions",
+      stats: "100+ Partners"
     },
     {
-      icon: Building2,
-      title: "Corporate",
-      description: "Employee transportation solutions",
-      stats: "200+ Companies"
+      icon: ShoppingBag,
+      title: "Hyperlocals & E-Commerce",
+      description: "Sustainable last-mile delivery",
+      stats: "50+ Retailers"
     },
     {
       icon: Truck,
-      title: "Logistics",
-      description: "Efficient goods transportation",
-      stats: "100+ Routes"
+      title: "Bigo Services",
+      description: "Affordable e-bike rental subscriptions",
+      stats: "500+ Fleet"
     },
     {
-      icon: Users,
-      title: "Food Delivery",
-      description: "Quick food delivery services",
-      stats: "500+ Riders"
+      icon: Home,
+      title: "Home Businesses",
+      description: "For bakeries, florists, and local shops",
+      stats: "200+ Entrepreneurs"
+    },
+    {
+      icon: Building2,
+      title: "Real Estate",
+      description: "Property consultants and agents",
+      stats: "100+ Agents"
+    },
+    {
+      icon: User,
+      title: "Other Services",
+      description: "Custom business mobility solutions",
+      stats: "Flexible Plans"
     }
   ];
 
@@ -43,7 +54,7 @@ const IndustryShowcase = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {industries.map((industry, index) => (
             <div key={index} className="feature-card text-center group">
               <div className="bg-bigo-teal-light/20 rounded-xl p-4 w-fit mx-auto mb-6 group-hover:bg-bigo-teal-light/40 transition-colors">

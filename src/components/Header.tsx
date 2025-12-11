@@ -1,15 +1,83 @@
-
 import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import mainlogo from '../assets/mainlogo.png';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // Function to handle navigation
+  const handleNavigation = (sectionId: string) => {
+    setIsOpen(false); // Close mobile menu
+
+    // If we're not on the homepage, navigate to homepage first
+    if (location.pathname !== '/') {
+      navigate('/');
+
+      // Use setTimeout to wait for navigation to complete before scrolling
+      setTimeout(() => {
+        scrollToSection(sectionId);
+      }, 100);
+    } else {
+      // If already on homepage, just scroll
+      scrollToSection(sectionId);
+    }
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerHeight = 64; // Height of fixed header (h-16 = 4rem = 64px)
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   const scrollToForm = () => {
-    const formElement = document.getElementById('contact-form');
-    if (formElement) {
-      formElement.scrollIntoView({ behavior: 'smooth' });
+    setIsOpen(false); // Close mobile menu
+
+    if (location.pathname !== '/') {
+      navigate('/');
+
+      setTimeout(() => {
+        const formElement = document.getElementById('contact-form');
+        if (formElement) {
+          const headerHeight = 64;
+          const elementPosition = formElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+    } else {
+      const formElement = document.getElementById('contact-form');
+      if (formElement) {
+        const headerHeight = 64;
+        const elementPosition = formElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
     }
+  };
+
+  // Regular navigation for pages (not sections)
+  const handlePageNavigation = (path: string) => {
+    setIsOpen(false);
+    navigate(path);
   };
 
   return (
@@ -17,22 +85,56 @@ const Header = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="text-2xl font-bold text-bigo-teal">
-            BiGo.bike
-          </div>
+          <Link to="/" className="flex items-center">
+            <img
+              src={mainlogo}
+              alt="BiGo.bike Logo"
+              className="h-20 w-auto"
+              onClick={() => setIsOpen(false)}
+            />
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#services" className="text-gray-700 hover:text-bigo-teal transition-colors">Services</a>
-            <a href="#pricing" className="text-gray-700 hover:text-bigo-teal transition-colors">Pricing</a>
-            <a href="#industries" className="text-gray-700 hover:text-bigo-teal transition-colors">Industries</a>
-            <a href="#founders" className="text-gray-700 hover:text-bigo-teal transition-colors">About</a>
-            <a href="#testimonials" className="text-gray-700 hover:text-bigo-teal transition-colors">Reviews</a>
+            {/* Homepage section links */}
+            <button
+              onClick={() => handleNavigation('about')}
+              className="text-gray-700 hover:text-bigo-teal transition-colors"
+            >
+              About Us
+            </button>
+            <button
+              onClick={() => handleNavigation('mission-vision')}
+              className="text-gray-700 hover:text-bigo-teal transition-colors"
+            >
+              Our Purpose
+            </button>
+            <button
+              onClick={() => handleNavigation('services')}
+              className="text-gray-700 hover:text-bigo-teal transition-colors"
+            >
+              Industries
+            </button>
+            <button
+              onClick={() => handleNavigation('industries')}
+              className="text-gray-700 hover:text-bigo-teal transition-colors"
+            >
+              Services
+            </button>
+
+
+
+            <button
+              onClick={() => handleNavigation('contact-form')}
+              className="text-gray-700 hover:text-bigo-teal transition-colors"
+            >
+              Contact Us
+            </button>
           </nav>
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button 
+            <button
               onClick={scrollToForm}
               className="btn-primary"
             >
@@ -41,7 +143,7 @@ const Header = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             className="md:hidden"
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -53,12 +155,44 @@ const Header = () => {
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
-              <a href="#services" className="block px-3 py-2 text-gray-700 hover:text-bigo-teal">Services</a>
-              <a href="#pricing" className="block px-3 py-2 text-gray-700 hover:text-bigo-teal">Pricing</a>
-              <a href="#industries" className="block px-3 py-2 text-gray-700 hover:text-bigo-teal">Industries</a>
-              <a href="#founders" className="block px-3 py-2 text-gray-700 hover:text-bigo-teal">About</a>
-              <a href="#testimonials" className="block px-3 py-2 text-gray-700 hover:text-bigo-teal">Reviews</a>
-              <button 
+              {/* Homepage section links */}
+              <button
+                onClick={() => handleNavigation('services')}
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-bigo-teal"
+              >
+                Services
+              </button>
+
+              <button
+                onClick={() => handleNavigation('industries')}
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-bigo-teal"
+              >
+                Industries
+              </button>
+              <button
+                onClick={() => handleNavigation('founders')}
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-bigo-teal"
+              >
+                About
+              </button>
+
+
+              {/* Legal pages */}
+              <button
+                onClick={() => handlePageNavigation('/privacy-policy')}
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-bigo-teal"
+              >
+                Privacy Policy
+              </button>
+              <button
+                onClick={() => handlePageNavigation('/terms-conditions')}
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-bigo-teal"
+              >
+                Terms & Conditions
+              </button>
+
+              {/* CTA */}
+              <button
                 onClick={scrollToForm}
                 className="w-full text-left px-3 py-2 text-bigo-teal font-semibold"
               >

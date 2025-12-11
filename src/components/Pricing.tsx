@@ -4,7 +4,7 @@ import { Check, Star } from 'lucide-react';
 const Pricing = () => {
   return (
     <section className="section-padding bg-white" id="pricing">
-      {/* <div className="container mx-auto">
+      <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="section-title">
             AFFORDABLE PLANS
@@ -13,6 +13,7 @@ const Pricing = () => {
           </h2>
         </div>
 
+        {/* Special Offer Card */}
         <div className="max-w-4xl mx-auto mb-16">
           <div className="bg-green-gradient rounded-2xl p-8 text-white text-center relative overflow-hidden">
             <div className="absolute top-0 right-0 bg-yellow-400 text-gray-900 px-4 py-2 rounded-bl-2xl font-bold">
@@ -38,6 +39,7 @@ const Pricing = () => {
           </div>
         </div>
 
+        {/* Features Grid */}
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           <div className="pricing-card">
             <div className="text-center mb-6">
@@ -141,7 +143,7 @@ const Pricing = () => {
             <button className="btn-outline w-full">Contact Sales</button>
           </div>
         </div>
-      </div> */}
+      </div>
     </section>
   );
 };

@@ -1,4 +1,3 @@
-
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import BusinessPartner from '@/components/BusinessPartner';
@@ -16,14 +15,31 @@ const Index = () => {
     <div className="min-h-screen">
       <Header />
       <Hero />
-      <BusinessPartner />
-      <MissionVision />
-      <Services />
-      <IndustryShowcase />
-      <Pricing />
-      <Founders />
-      <Testimonials />
-      <ContactForm />
+      <section id="about">
+
+        <BusinessPartner />
+      </section>
+      <section id="mission-vision">
+
+        <MissionVision />
+      </section>
+
+      {/* Services section with ID */}
+      <section id="services">
+        <Services />
+      </section>
+
+      {/* Industry section with ID */}
+      <section id="industries">
+        <IndustryShowcase />
+      </section>
+
+
+      {/* Contact form with ID */}
+      <section id="contact-form">
+        <ContactForm />
+      </section>
+
       <Footer />
     </div>
   );
