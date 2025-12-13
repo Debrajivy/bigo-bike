@@ -4,9 +4,9 @@ import { Target, Eye, Heart } from 'lucide-react';
 const MissionVision = () => {
   return (
     <section className="section-padding bg-gray-50" id="mission" style={{marginTop:-150}}>
-      <div className="container mx-auto">
+      <div style={{marginTop:20}} className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="section-title">
+          <h2  className="section-title">
             OUR MISSION &
             <br />
             <span className="text-bigo-teal">VISION</span>
